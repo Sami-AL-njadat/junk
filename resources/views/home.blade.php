@@ -6,7 +6,7 @@
         <div class="position-absolute top-0 start-0 end-0 bottom-0 z-0">
             <img
                 src="https://images.unsplash.com/photo-1493238792000-8113da705763?w=1920&q=85"
-                alt=""
+                alt="Urban highway at dusk — Titan Cash For Junk Cars serves the Chicago area"
                 class="w-100 h-100 object-fit-cover hero-bg-img"
                 width="1920"
                 height="1080"
@@ -60,16 +60,8 @@
                     <div class="stats-panel industrial-clip stats-stack mb-0">
                         <p class="text-muted-foreground fw-bold text-uppercase mb-0 tracking-widest small">Trusted by thousands across Chicagoland</p>
 
-                        @php
-                            $stats = [
-                                ['icon' => 'bi-currency-dollar', 'value' => '$2M+', 'label' => 'Paid Out'],
-                                ['icon' => 'bi-truck', 'value' => '5,000+', 'label' => 'Cars Picked Up'],
-                                ['icon' => 'bi-star-fill', 'value' => '500+', 'label' => '5-Star Reviews'],
-                            ];
-                        @endphp
-
                         <div class="stats-list">
-                            @foreach ($stats as $row)
+                            @foreach ($heroStats as $row)
                                 <div class="d-flex align-items-center" style="gap: 1.25rem;">
                                     <div class="flex-shrink-0 d-flex align-items-center justify-content-center industrial-clip border stats-icon-wrap" style="width: 3.5rem; height: 3.5rem;">
                                         <i class="bi {{ $row['icon'] }} fs-4 text-titan-primary"></i>
@@ -109,16 +101,9 @@
                 </p>
             </div>
             <div class="row titan-gutter-8">
-                @php
-                    $steps = [
-                        ['icon' => 'bi-telephone-fill', 'title' => 'Call or Submit', 'desc' => "Give us a call at (331) 341-4878 or fill out our online form with your vehicle's details.", 'num' => '01'],
-                        ['icon' => 'bi-clipboard-check', 'title' => 'Get A Quote', 'desc' => "We'll provide an instant, no-obligation cash offer based on the make, model, and condition.", 'num' => '02'],
-                        ['icon' => 'bi-cash-stack', 'title' => 'Get Paid Cash', 'desc' => 'We tow your car for free and hand you cash on the spot. Same-day service available.', 'num' => '03'],
-                    ];
-                @endphp
                 @foreach ($steps as $step)
                     <div class="col-md-4">
-                            <div class="position-relative h-100 bg-titan-background border industrial-clip-reverse border-titan card-hover-border how-step-card p-titan-8">
+                        <div class="position-relative h-100 bg-titan-background border industrial-clip-reverse border-titan card-hover-border how-step-card p-titan-8">
                             <div class="position-absolute top-0 end-0 font-display fw-bold text-foreground user-select-none titan-step-watermark titan-step-watermark-hover">{{ $step['num'] }}</div>
                             <div class="d-flex align-items-center justify-content-center industrial-clip border mb-4 icon-step-box" style="width: 4rem; height: 4rem;">
                                 <i class="bi {{ $step['icon'] }} fs-3 text-titan-primary"></i>
@@ -149,14 +134,6 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="row titan-gutter-6">
-                        @php
-                            $features = [
-                                ['icon' => 'bi-truck', 'title' => 'Free Towing', 'desc' => 'We never charge for pickup. The offer we give is the cash you keep.'],
-                                ['icon' => 'bi-clock-history', 'title' => 'Same-Day Pickup', 'desc' => 'Need it gone today? We offer rapid response across the Chicago area.'],
-                                ['icon' => 'bi-currency-dollar', 'title' => 'Top Dollar Paid', 'desc' => 'We constantly monitor market scrap prices to guarantee you the best offer.'],
-                                ['icon' => 'bi-car-front', 'title' => 'Any Make or Model', 'desc' => 'Running, wrecked, salvaged, or missing parts — we buy them all.'],
-                            ];
-                        @endphp
                         @foreach ($features as $f)
                             <div class="col-sm-6">
                                 <div class="h-100 bg-titan-card bg-opacity-50 border border-opacity-10 feature-tile p-titan-8" style="--bs-bg-opacity: 0.5; border-color: rgba(255,255,255,0.05) !important; backdrop-filter: blur(6px);">
@@ -185,46 +162,12 @@
                     Running or not, wrecked, flooded, or just plain old — we buy all types of vehicles across the Chicago area.
                 </p>
             </div>
-            @php
-                $cars = [
-                    [
-                        'label' => 'Junk Sedans',
-                        'image' => asset('images/gallery/junk-sedans.webp'),
-                        'alt' => 'Damaged and broken-down junk sedan',
-                    ],
-                    [
-                        'label' => 'Wrecked SUVs',
-                        'image' => asset('images/gallery/wrecked-suvs.webp'),
-                        'alt' => 'Wrecked SUV with heavy front-end damage',
-                    ],
-                    [
-                        'label' => 'Old Trucks',
-                        'image' => asset('images/gallery/old-trucks.webp'),
-                        'alt' => 'Old worn pickup truck we buy for cash',
-                    ],
-                    [
-                        'label' => 'Flood & Fire Damage',
-                        'image' => asset('images/gallery/flood-fire-damage.webp'),
-                        'alt' => 'Flood-submerged and storm-damaged vehicles',
-                    ],
-                    [
-                        'label' => 'Non-Running Cars',
-                        'image' => asset('images/gallery/non-running.webp'),
-                        'alt' => 'Non-running car that will not start',
-                    ],
-                    [
-                        'label' => 'Any Make & Model',
-                        'image' => asset('images/gallery/any-make-model.webp'),
-                        'alt' => 'Row of Mercedes-Benz vehicles — we buy every make and model',
-                    ],
-                ];
-            @endphp
             <div class="row titan-gutter-8">
-                @foreach ($cars as $car)
+                @foreach ($galleryCars as $car)
                     <div class="col-sm-6 col-lg-4">
                         <div class="gallery-card bg-titan-background border industrial-clip border-titan overflow-hidden h-100 card-hover-border">
                             <div class="position-relative overflow-hidden gallery-img-wrap">
-                                <img src="{{ $car['image'] }}" alt="{{ $car['alt'] }}" class="gallery-img w-100 h-100 object-fit-cover" width="1400" loading="lazy" decoding="async" style="filter: grayscale(0.2);">
+                                <img src="{{ asset($car['image']) }}" alt="{{ $car['alt'] }}" class="gallery-img w-100 h-100 object-fit-cover" width="1400" loading="lazy" decoding="async" style="filter: grayscale(0.2);">
                                 <div class="position-absolute top-0 start-0 end-0 bottom-0" style="background: linear-gradient(to top, hsl(var(--background) / 0.8), transparent);"></div>
                                 <span class="position-absolute btn-titan-call industrial-clip text-decoration-none titan-gallery-badge">We Buy This</span>
                             </div>
@@ -260,12 +203,9 @@
                         </p>
                     </header>
 
-                    @php
-                        $areas = ['Chicago', 'Palos Hills', 'Orland Park', 'Tinley Park', 'Joliet', 'Naperville', 'Oak Lawn', 'Bridgeview', 'Burbank', 'Worth', 'Alsip', 'Harvey', 'Aurora', 'Bolingbrook', 'Cicero'];
-                    @endphp
                     <div class="service-area-panel shadow-lg">
                         <div class="row g-2 g-md-3">
-                            @foreach ($areas as $area)
+                            @foreach ($serviceAreas as $area)
                                 <div class="col-6 col-md-4 col-lg-3">
                                     <div class="service-area-city h-100 d-flex align-items-center justify-content-center text-center">
                                         <span class="d-block text-uppercase small fw-bold tracking-wide lh-sm">{{ $area }}</span>

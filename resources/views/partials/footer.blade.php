@@ -1,6 +1,3 @@
-@php
-    $year = now()->year;
-@endphp
 <footer class="bg-titan-background border-top border-titan footer-titan mt-auto">
     <div class="titan-container">
         <div class="row g-5 mb-titan-16">
@@ -71,7 +68,7 @@
         <div
             class="border-top border-titan footer-titan-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
             <p class="text-muted-foreground small fw-bold text-uppercase mb-0" style="letter-spacing: 0.08em;">
-                &copy; {{ $year }} Titan Cash For Junk Cars. All rights reserved.
+                &copy; {{ now()->year }} Titan Cash For Junk Cars. All rights reserved.
             </p>
             <div class="text-muted-foreground small fw-bold text-uppercase d-flex gap-4">
                 <a href="#" class="text-decoration-none text-muted-foreground link-titan-footer">Privacy

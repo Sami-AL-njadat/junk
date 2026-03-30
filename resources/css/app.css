@@ -80,12 +80,6 @@
     padding-bottom: 6rem;
 }
 
-/* py-20 */
-.section-py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-}
-
 /* mb-16 ≈ 4rem */
 .mb-titan-16 {
     margin-bottom: 4rem;
@@ -99,10 +93,6 @@
 /* mt-12 ≈ 3rem */
 .mt-titan-12 {
     margin-top: 3rem;
-}
-
-.mb-titan-10 {
-    margin-bottom: 2.5rem;
 }
 
 /* gap-8 grid / flex */
@@ -217,22 +207,18 @@
 
 /* Light mode: rich warm gold (no mix toward near-black text color) */
 [data-bs-theme="light"] .section-service-area-v2.section-service-area {
-    background: linear-gradient(
-        155deg,
-        hsl(43 96% 62%) 0%,
-        hsl(38 95% 46%) 48%,
-        hsl(32 88% 40%) 100%
-    );
+    background: linear-gradient(155deg,
+            hsl(43 96% 62%) 0%,
+            hsl(38 95% 46%) 48%,
+            hsl(32 88% 40%) 100%);
 }
 
 /* Dark mode: bright amber band, still reads “gold” on dark UI */
 [data-bs-theme="dark"] .section-service-area-v2.section-service-area {
-    background: linear-gradient(
-        155deg,
-        hsl(42 100% 56%) 0%,
-        hsl(var(--primary)) 45%,
-        hsl(28 78% 34%) 100%
-    );
+    background: linear-gradient(155deg,
+            hsl(42 100% 56%) 0%,
+            hsl(var(--primary)) 45%,
+            hsl(28 78% 34%) 100%);
 }
 
 .service-area-bg {
@@ -242,7 +228,7 @@
     z-index: 0;
     background-image:
         radial-gradient(ellipse 100% 60% at 50% -15%, rgba(255, 255, 255, 0.28), transparent 52%),
-        url("/images/industrial-texture.png");
+        url("/images/industrial-texture.webp");
     background-size: auto, cover;
     background-position: center, center;
     opacity: 0.22;
@@ -253,11 +239,9 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        180deg,
-        transparent 0%,
-        hsl(0 0% 0% / 0.12) 100%
-    );
+    background: linear-gradient(180deg,
+            transparent 0%,
+            hsl(0 0% 0% / 0.12) 100%);
     pointer-events: none;
 }
 
@@ -383,16 +367,6 @@
     right: 0.75rem;
 }
 
-.service-area-chips {
-    gap: 0.75rem;
-}
-
-@media (min-width: 768px) {
-    .service-area-chips {
-        gap: 1rem;
-    }
-}
-
 .btn-titan-contact-cta {
     padding: 1.25rem 2.5rem !important;
     font-size: 1.25rem !important;
@@ -471,16 +445,6 @@ h6,
     box-shadow: 0 0 30px rgba(255, 176, 0, 0.22);
 }
 
-.bg-hazard {
-    background-image: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 10px,
-        rgba(0, 0, 0, 0.05) 10px,
-        rgba(0, 0, 0, 0.05) 20px
-    );
-}
-
 ::selection {
     background-color: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
@@ -543,7 +507,7 @@ h6,
 
 .btn-theme-cycle {
     border: 1px solid hsl(var(--border));
-    color: hsl(var(--muted-foreground));
+    color: hsl(var(--primary));
     background: transparent;
     font-size: 0.75rem;
     font-weight: 700;
@@ -896,6 +860,7 @@ h6,
 }
 
 @keyframes titan-ping {
+
     75%,
     100% {
         transform: scale(2);
