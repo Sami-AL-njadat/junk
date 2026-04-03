@@ -20,7 +20,7 @@ class HomeController extends Controller
                 ['icon' => 'bi-star-fill', 'value' => '500+', 'label' => '5-Star Reviews'],
             ],
             'steps' => [
-                ['icon' => 'bi-telephone-fill', 'title' => 'Call or Submit', 'desc' => "Give us a call at (331) 341-4878 or fill out our online form with your vehicle's details.", 'num' => '01'],
+                ['icon' => 'bi-telephone-fill', 'title' => 'Call', 'desc' => "Give us a call at (331) 341-4878 or fill out our online form with your vehicle's details.", 'num' => '01'],
                 ['icon' => 'bi-clipboard-check', 'title' => 'Get A Quote', 'desc' => "We'll provide an instant, no-obligation cash offer based on the make, model, and condition.", 'num' => '02'],
                 ['icon' => 'bi-cash-stack', 'title' => 'Get Paid Cash', 'desc' => 'We tow your car for free and hand you cash on the spot. Same-day service available.', 'num' => '03'],
             ],

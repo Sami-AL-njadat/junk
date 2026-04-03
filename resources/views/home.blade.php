@@ -30,24 +30,27 @@
                         TURN YOUR<br>JUNK CAR<br>INTO <span class="text-titan-primary text-glow d-inline-block">CASH.</span>
                     </h1>
 
-                    <p class="hero-lead text-muted-foreground">
+                    <p class="hero-lead">
                         We pay top dollar for any make, model, or condition. Running or not —
                         we come to you with cash in hand.
                     </p>
 
-                    <div class="hero-pills">
+                    <ul class="list-unstyled hero-pills " aria-label="What you get with every deal">
                         @foreach (['Free Towing', 'Same-Day Pickup', 'Cash on the Spot'] as $item)
-                            <span class="d-flex align-items-center" style="gap: 0.375rem;">
-                                <span class="titan-pill-dot rounded-circle bg-titan-primary d-inline-block"></span>
-                                {{ $item }}
-                            </span>
+                            <li class="hero-pill-step industrial-clip">
+                                <span class="hero-pill-step-num" aria-hidden="true">{{ $loop->iteration }}</span>
+                                <div class="hero-pill-step-body">
+                                    <span class="titan-pill-dot rounded-circle bg-titan-primary d-inline-block flex-shrink-0" aria-hidden="true"></span>
+                                    <span class="hero-pill-step-text">{{ $item }}</span>
+                                </div>
+                            </li>
                         @endforeach
-                    </div>
+                    </ul>
 
                     <div class="hero-cta-row">
                         <a href="tel:+13313414878" class="btn-titan-hero-primary industrial-clip box-glow">
                             <i class="bi bi-telephone-fill fs-5"></i>
-                            Call for Cash Offer
+                            (331) 341-4878  
                         </a>
                         <a href="#how-it-works" class="btn-titan-hero-secondary industrial-clip">
                             See How It Works
