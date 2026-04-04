@@ -69,8 +69,29 @@ function initPreloader() {
     }, 2200);
 }
 
+/**
+ * Bootstrap calls preventDefault() on <a data-bs-dismiss="offcanvas">, which blocks
+ * #hash scrolling and tel: links. Close the drawer via the real dismiss control instead.
+ */
+function initMobileOffcanvasNavLinks() {
+    const root = document.getElementById("titanMobileNav");
+    if (!root) return;
+    const body = root.querySelector(".offcanvas-body");
+    if (!body) return;
+
+    body.addEventListener("click", (event) => {
+        const link = event.target.closest("a[href]");
+        if (!link || !body.contains(link)) return;
+        const href = link.getAttribute("href");
+        if (!href || href === "#") return;
+
+        root.querySelector(".btn-close")?.click();
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     initTheme();
     initNavbarScroll();
     initPreloader();
+    initMobileOffcanvasNavLinks();
 });

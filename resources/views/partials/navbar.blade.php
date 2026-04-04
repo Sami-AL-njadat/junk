@@ -68,18 +68,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body d-flex flex-column align-items-center justify-content-center gap-4 py-5">
-        <a href="#how-it-works" class="font-display fs-3 fw-bold text-decoration-none text-foreground"
-            data-bs-dismiss="offcanvas">How It Works</a>
-        <a href="#why-us" class="font-display fs-3 fw-bold text-decoration-none text-foreground"
-            data-bs-dismiss="offcanvas">Why Us</a>
-        <a href="#service-area" class="font-display fs-3 fw-bold text-decoration-none text-foreground"
-            data-bs-dismiss="offcanvas">Service Area</a>
-        <a href="#quote-form" class="font-display fs-3 fw-bold text-decoration-none text-foreground"
-            data-bs-dismiss="offcanvas">Contact Us</a>
+        <a href="#how-it-works" class="font-display fs-3 fw-bold text-decoration-none text-foreground">How It Works</a>
+        <a href="#why-us" class="font-display fs-3 fw-bold text-decoration-none text-foreground">Why Us</a>
+        <a href="#service-area" class="font-display fs-3 fw-bold text-decoration-none text-foreground">Service Area</a>
+        <a href="#quote-form" class="font-display fs-3 fw-bold text-decoration-none text-foreground">Contact Us</a>
         <hr class="w-75 border-titan opacity-100">
         <a href="tel:+13313414878"
             class="btn-titan-call industrial-clip w-100 d-flex align-items-center justify-content-center gap-2 py-3 fs-5 text-decoration-none box-glow"
-            data-bs-dismiss="offcanvas">
+        >
             <i class="bi bi-telephone-fill fs-4"></i>
             <span>(331) 341-4878</span>
         </a>
