@@ -10,7 +10,7 @@
 <header id="site-header" class="site-header" data-header>
     <div class="container header-bar">
         <a href="{{ route('home') }}" class="brand" aria-label="{{ $site['name'] }} — home">
-            @include('partials.titan-logo', ['size' => 44])
+            @include('partials.titan-logo', ['size' => 54])
             <span class="brand-text">
                 <span class="brand-name">Titan <span>Cash</span></span>
                 <span class="brand-sub">For Junk Cars</span>

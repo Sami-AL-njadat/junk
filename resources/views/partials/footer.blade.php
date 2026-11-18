@@ -3,7 +3,7 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="{{ route('home') }}" class="brand footer-logo" aria-label="{{ $site['name'] }} — home">
-                    @include('partials.titan-logo', ['size' => 48])
+                    @include('partials.titan-logo', ['size' => 84])
                     <span class="brand-text">
                         <span class="brand-name">Titan <span>Cash</span></span>
                         <span class="brand-sub">For Junk Cars</span>

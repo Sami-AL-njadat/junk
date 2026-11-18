@@ -340,10 +340,9 @@ button {
 }
 
 .brand-mark {
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 25%;
-    box-shadow: 0 6px 14px -6px hsl(var(--red) / 0.7);
+    width: auto;
+    height: 3.375rem;
+    filter: drop-shadow(0 4px 8px hsl(var(--shadow) / 0.22));
 }
 
 .brand-text {
@@ -1391,8 +1390,8 @@ html:not([data-theme-mode]) .theme-icon--auto {
 }
 
 .footer-logo .brand-mark {
-    width: 3rem;
-    height: 3rem;
+    height: 5.25rem;
+    filter: none;
 }
 
 .footer-logo .brand-name span {
