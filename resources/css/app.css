@@ -1479,6 +1479,19 @@ html:not([data-theme-mode]) .theme-icon--auto {
     font-size: 0.8125rem;
 }
 
+.footer-credit a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--red-light));
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+
+.footer-credit a:hover {
+    color: hsl(var(--red-light));
+}
+
 @media (min-width: 640px) {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);

@@ -65,6 +65,8 @@
         <div class="footer-bottom">
             <p>&copy; {{ now()->year }} {{ $site['name'] }}. All rights reserved.</p>
             <p>Junk car removal &amp; cash for cars in Chicago, IL and suburbs.</p>
+            <p class="footer-credit">Developed by <a href="https://sami-al-njadat.github.io/" target="_blank"
+                    rel="noopener">Sami Alnjadat</a></p>
         </div>
     </div>
 </footer>
