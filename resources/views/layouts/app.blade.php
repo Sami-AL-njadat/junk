@@ -9,7 +9,8 @@
     <link rel="canonical" href="{{ $canonical }}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="sami Ismaeel alnjadat SAM95NJT">
-    <meta name="theme-color" content="#040404">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1525" media="(prefers-color-scheme: dark)">
 
     {{-- Social sharing --}}
     <meta property="og:type" content="website">
@@ -29,6 +30,7 @@
 
     {{-- Icons --}}
     <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/icons/icon-192.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">

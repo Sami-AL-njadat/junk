@@ -108,7 +108,7 @@ class HomeController extends Controller
                         $site['url'].'/images/og-image.jpg',
                         $site['url'].'/images/hero/hero-1600.webp',
                     ],
-                    'logo' => $site['url'].'/images/logo.webp',
+                    'logo' => $site['url'].'/images/logo.png',
                     'address' => [
                         '@type' => 'PostalAddress',
                         'streetAddress' => $site['address']['street'],

@@ -3,26 +3,15 @@
 @section('content')
     {{-- Hero --}}
     <section class="hero" aria-labelledby="hero-title">
-        <picture class="hero-media">
-            <source type="image/avif"
-                srcset="{{ asset('images/hero/hero-640.avif') }} 640w, {{ asset('images/hero/hero-1024.avif') }} 1024w, {{ asset('images/hero/hero-1600.avif') }} 1600w, {{ asset('images/hero/hero-2000.avif') }} 2000w"
-                sizes="100vw">
-            <img src="{{ asset('images/hero/hero-1600.webp') }}"
-                srcset="{{ asset('images/hero/hero-640.webp') }} 640w, {{ asset('images/hero/hero-1024.webp') }} 1024w, {{ asset('images/hero/hero-1600.webp') }} 1600w, {{ asset('images/hero/hero-2000.webp') }} 2000w"
-                sizes="100vw" width="1600" height="1067" fetchpriority="high" decoding="async"
-                alt="Damaged car strapped onto a flatbed tow truck for free junk car removal in Chicago">
-        </picture>
-
         <div class="container hero-grid">
             <div class="hero-copy">
                 <p class="hero-badge">
-                    <span class="ping" aria-hidden="true"></span>
-                    Chicago’s #1 junk car buyer
+                    <x-icon name="star" /> Chicago’s #1 junk car buyer
                 </p>
 
                 <h1 id="hero-title" class="hero-title">
-                    <span class="hero-kicker">Cash for junk cars · Chicago, IL</span>
-                    Turn your junk car into <span class="text-gold">cash.</span>
+                    <span class="hero-kicker">Cash for junk cars in Chicago, IL</span>
+                    Turn your junk car into <span class="highlight">cash</span> today.
                 </h1>
 
                 <p class="hero-lead">
@@ -32,9 +21,9 @@
 
                 <div class="hero-ctas" data-hero-cta>
                     <a href="tel:{{ $site['phone'] }}" class="btn btn-primary btn-lg">
-                        <x-icon name="phone" /> {{ $site['phone_display'] }}
+                        <x-icon name="phone" /> Call {{ $site['phone_display'] }}
                     </a>
-                    <a href="sms:{{ $site['phone'] }}" class="btn btn-ghost btn-lg">
+                    <a href="sms:{{ $site['phone'] }}" class="btn btn-outline btn-lg">
                         <x-icon name="chat" /> Text for a quote
                     </a>
                 </div>
@@ -44,39 +33,58 @@
                         <li><x-icon name="check" /> {{ $item }}</li>
                     @endforeach
                 </ul>
-            </div>
 
-            <aside class="offer-card" aria-labelledby="offer-title">
-                <p class="offer-eyebrow">Free · No obligation</p>
-                <h2 id="offer-title" class="offer-title">Get a cash offer in minutes</h2>
-                <ul class="offer-stats">
-                    @foreach ($heroStats as $row)
-                        <li>
-                            <span class="offer-stat-icon"><x-icon :name="$row['icon']" /></span>
-                            <span>
-                                <strong>{{ $row['value'] }}</strong>
-                                <span>{{ $row['label'] }}</span>
-                            </span>
-                        </li>
-                    @endforeach
-                </ul>
-                <a href="tel:{{ $site['phone'] }}" class="offer-phone">
-                    <x-icon name="phone" />
-                    <span>
-                        <strong>{{ $site['phone_display'] }}</strong>
-                        <span>Call or text anytime</span>
-                    </span>
-                    <x-icon name="arrow" class="offer-phone-arrow" />
-                </a>
-                <p class="offer-hours">
+                <p class="hero-hours">
                     <x-icon name="clock" />
-                    <span>
+                    <span>Open
                         @foreach ($site['hours'] as $h)
-                            <span>{{ $h['label'] }}: {{ $h['display'] }}</span>
+                            {{ $h['label'] }} {{ $h['display'] }}@if (! $loop->last) · @endif
                         @endforeach
                     </span>
                 </p>
-            </aside>
+            </div>
+
+            <div class="hero-visual">
+                <picture class="hero-photo">
+                    <source type="image/avif"
+                        srcset="{{ asset('images/hero/hero-640.avif') }} 640w, {{ asset('images/hero/hero-800.avif') }} 800w, {{ asset('images/hero/hero-1024.avif') }} 1024w, {{ asset('images/hero/hero-1600.avif') }} 1600w"
+                        sizes="(min-width: 1024px) 560px, calc(100vw - 2rem)">
+                    <img src="{{ asset('images/hero/hero-1024.webp') }}"
+                        srcset="{{ asset('images/hero/hero-640.webp') }} 640w, {{ asset('images/hero/hero-800.webp') }} 800w, {{ asset('images/hero/hero-1024.webp') }} 1024w, {{ asset('images/hero/hero-1600.webp') }} 1600w"
+                        sizes="(min-width: 1024px) 560px, calc(100vw - 2rem)" width="1024" height="683" fetchpriority="high"
+                        alt="Damaged car strapped onto a flatbed tow truck for free junk car removal in Chicago">
+                </picture>
+                <div class="hero-float hero-float--rating">
+                    <span class="stars" aria-hidden="true">
+                        @for ($i = 0; $i < 5; $i++)
+                            <x-icon name="star" />
+                        @endfor
+                    </span>
+                    <span><strong>500+</strong> five-star reviews</span>
+                </div>
+                <div class="hero-float hero-float--paid">
+                    <span class="hero-float-icon"><x-icon name="dollar" /></span>
+                    <span><strong>$2M+</strong> paid to local drivers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Trust stats --}}
+    <section class="stats-strip" aria-label="Titan by the numbers">
+        <div class="container">
+            <ul class="stats">
+                @foreach ($heroStats as $row)
+                    <li>
+                        <span class="stat-icon"><x-icon :name="$row['icon']" /></span>
+                        <span><strong>{{ $row['value'] }}</strong> {{ $row['label'] }}</span>
+                    </li>
+                @endforeach
+                <li>
+                    <span class="stat-icon"><x-icon name="bolt" /></span>
+                    <span><strong>Same day</strong> pickup available</span>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -93,7 +101,7 @@
             <ol class="steps">
                 @foreach ($steps as $step)
                     <li class="step reveal">
-                        <span class="step-num" aria-hidden="true">0{{ $loop->iteration }}</span>
+                        <span class="step-num">Step {{ $loop->iteration }}</span>
                         <span class="step-icon"><x-icon :name="$step['icon']" /></span>
                         <h3 class="step-title">{{ $step['title'] }}</h3>
                         <p>{{ $step['desc'] }}</p>
@@ -153,7 +161,7 @@
                             srcset="{{ asset('images/gallery/'.$car['image'].'-480.webp') }} 480w, {{ asset('images/gallery/'.$car['image'].'-800.webp') }} 800w"
                             sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw" width="800"
                             height="600" alt="{{ $car['alt'] }}" loading="lazy" decoding="async">
-                        <span class="car-chip">We buy it</span>
+                        <span class="car-chip"><x-icon name="check" /> We buy it</span>
                         <h3 class="car-label">{{ $car['label'] }}</h3>
                     </li>
                 @endforeach
@@ -165,8 +173,8 @@
     <section id="service-area" class="section section-dark" aria-labelledby="area-title">
         <div class="container area-grid">
             <div class="area-copy">
-                <p class="eyebrow eyebrow-gold">Free towing across Chicagoland</p>
-                <h2 id="area-title" class="section-title">Junk car removal in <span class="text-gold">greater
+                <p class="eyebrow eyebrow-light">Free towing across Chicagoland</p>
+                <h2 id="area-title" class="section-title">Junk car removal in <span class="text-soft">greater
                         Chicago</span></h2>
                 <p class="section-body">
                     Wherever your vehicle is parked in the metro area, our trucks come to you — fast, free and
@@ -231,7 +239,7 @@
                         Chicagoland.</p>
                 </div>
                 <div class="cta-actions">
-                    <a href="tel:{{ $site['phone'] }}" class="btn btn-primary btn-lg">
+                    <a href="tel:{{ $site['phone'] }}" class="btn btn-light btn-lg">
                         <x-icon name="phone" /> {{ $site['phone_display'] }}
                     </a>
                     <a href="sms:{{ $site['phone'] }}" class="btn btn-ghost btn-lg">

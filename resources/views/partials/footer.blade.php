@@ -2,10 +2,13 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <img src="{{ asset('images/logo-emblem-320.webp') }}"
-                    srcset="{{ asset('images/logo-emblem-320.webp') }} 320w, {{ asset('images/logo-emblem-640.webp') }} 640w"
-                    sizes="220px" width="220" height="159" alt="{{ $site['name'] }} logo" loading="lazy"
-                    decoding="async" class="footer-logo">
+                <a href="{{ route('home') }}" class="brand footer-logo" aria-label="{{ $site['name'] }} — home">
+                    @include('partials.titan-logo', ['size' => 48])
+                    <span class="brand-text">
+                        <span class="brand-name">Titan <span>Cash</span></span>
+                        <span class="brand-sub">For Junk Cars</span>
+                    </span>
+                </a>
                 <p>Chicago’s trusted junk car buyer. We pay top dollar for vehicles in any condition — with free
                     towing always included.</p>
             </div>

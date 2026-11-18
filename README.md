@@ -15,7 +15,7 @@ Single-page marketing site for [titan-cash-for-junk-cars.com](https://titan-cash
 | Self-hosted font (Archivo variable, OFL) | `public/fonts/` |
 | SEO files | `public/robots.txt`, `public/sitemap.xml`, `public/site.webmanifest`, `public/images/og-image.jpg` |
 
-Brand palette (from the brand board): black `#040404`, white `#ffffff`, red `#760000`, gold `#f8ed94 / #e3bb45 / #c28900 / #be8000`.
+Palette (tokens at the top of `resources/css/app.css`): logo red `#D62839` for buttons and accents, soft navy `#1B2741` for dark bands and the footer, white and light gray `#F5F7FB` backgrounds, green checkmarks, yellow review stars.
 
 `www.` requests are 301-redirected to the bare domain by `app/Http/Middleware/RedirectToCanonicalHost.php`.
 
