@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://titan-cash-for-junk-cars.com/</loc>
-        <lastmod>2026-04-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
+        <lastmod>2026-11-18</lastmod>
+        <image:image><image:loc>https://titan-cash-for-junk-cars.com/images/hero/hero-1600.webp</image:loc></image:image>
+        <image:image><image:loc>https://titan-cash-for-junk-cars.com/images/logo.webp</image:loc></image:image>
+        <image:image><image:loc>https://titan-cash-for-junk-cars.com/images/gallery/junk-sedans-800.webp</image:loc></image:image>
+        <image:image><image:loc>https://titan-cash-for-junk-cars.com/images/gallery/wrecked-cars-800.webp</image:loc></image:image>
+        <image:image><image:loc>https://titan-cash-for-junk-cars.com/images/gallery/old-trucks-800.webp</image:loc></image:image>
+        <image:image><image:loc>https://titan-cash-for-junk-cars.com/images/gallery/fire-flood-damage-800.webp</image:loc></image:image>
+        <image:image><image:loc>https://titan-cash-for-junk-cars.com/images/gallery/non-running-800.webp</image:loc></image:image>
+        <image:image><image:loc>https://titan-cash-for-junk-cars.com/images/gallery/any-make-model-800.webp</image:loc></image:image>
     </url>
 </urlset>

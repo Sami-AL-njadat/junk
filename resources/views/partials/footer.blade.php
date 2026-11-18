@@ -1,81 +1,67 @@
-<footer class="bg-titan-background border-top border-titan footer-titan mt-auto">
-    <div class="titan-container">
-        <div class="row g-5 mb-titan-16">
-            <div class="col-md-6 col-lg-3">
-                <div class="d-flex align-items-center gap-3 mb-4">
-                    <div
-                        class="logo-box industrial-clip d-flex align-items-center justify-content-center overflow-hidden flex-shrink-0">
-                        @include('partials.titan-logo', [
-                            'class' => 'w-100 h-100 object-fit-contain p-1',
-                            'width' => 40,
-                            'height' => 40,
-                        ])
-                    </div>
-                    <span class="font-display fs-5 fw-bold tracking-wide text-foreground">
-                        TITAN <span class="text-titan-primary">CASH</span>
-                    </span>
-                </div>
-                <p class="text-muted-foreground small lh-lg mb-0">
-                    Chicago's most trusted junk car buyer. We pay top dollar for vehicles in any condition, with free
-                    towing always included.
-                </p>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="{{ asset('images/logo-emblem-320.webp') }}"
+                    srcset="{{ asset('images/logo-emblem-320.webp') }} 320w, {{ asset('images/logo-emblem-640.webp') }} 640w"
+                    sizes="220px" width="220" height="159" alt="{{ $site['name'] }} logo" loading="lazy"
+                    decoding="async" class="footer-logo">
+                <p>Chicago’s trusted junk car buyer. We pay top dollar for vehicles in any condition — with free
+                    towing always included.</p>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <h4 class="font-display fw-bold text-foreground fs-6 mb-4">Contact Us</h4>
-                <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+
+            <div>
+                <h2 class="footer-title">Contact</h2>
+                <ul class="footer-list">
                     <li>
-                        <a href="tel:+13313414878"
-                            class="footer-phone d-flex align-items-start gap-2 text-muted-foreground text-decoration-none">
-                            <i class="bi bi-telephone-fill text-titan-primary flex-shrink-0"></i>
-                            <span class="fw-bold text-foreground">1 (331) 341-4878</span>
+                        <a href="tel:{{ $site['phone'] }}" class="footer-phone">
+                            <x-icon name="phone" /> {{ $site['phone_display'] }}
                         </a>
                     </li>
-                    <li class="d-flex align-items-start gap-2 text-muted-foreground small">
-                        <i class="bi bi-geo-alt text-titan-primary flex-shrink-0 mt-1"></i>
-                        <span>9731 S 90th Ave<br>Palos Hills, IL 60465</span>
+                    <li>
+                        <a href="sms:{{ $site['phone'] }}">
+                            <x-icon name="chat" /> Text us anytime
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ $site['maps_url'] }}" target="_blank" rel="noopener">
+                            <x-icon name="pin" />
+                            <span>{{ $site['address']['street'] }}<br>{{ $site['address']['city'] }},
+                                {{ $site['address']['region'] }} {{ $site['address']['postal_code'] }}</span>
+                        </a>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <h4 class="font-display fw-bold text-foreground fs-6 mb-4">Hours</h4>
-                <ul class="list-unstyled mb-0">
-                    <li class="d-flex align-items-start gap-2 text-muted-foreground small">
-                        <i class="bi bi-clock text-titan-primary flex-shrink-0"></i>
+
+            <div>
+                <h2 class="footer-title">Hours</h2>
+                <dl class="footer-hours">
+                    @foreach ($site['hours'] as $h)
                         <div>
-                            <p class="mb-1 d-flex justify-content-between gap-3" style="width: 10rem;"><span
-                                    class="text-foreground">Mon-Sat:</span> <span>8am - 8pm</span></p>
-                            <p class="mb-0 d-flex justify-content-between gap-3" style="width: 10rem;"><span
-                                    class="text-foreground">Sunday:</span> <span>10am - 6pm</span></p>
+                            <dt>{{ $h['label'] }}</dt>
+                            <dd>{{ $h['display'] }}</dd>
                         </div>
-                    </li>
-                </ul>
+                    @endforeach
+                </dl>
+                <p class="footer-note"><x-icon name="bolt" /> Same-day pickup available</p>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <h4 class="font-display fw-bold text-foreground fs-6 mb-4">Quick Links</h4>
-                <ul
-                    class="list-unstyled d-flex flex-column gap-2 small fw-semibold text-uppercase text-muted-foreground">
-                    <li><a href="#how-it-works" class="text-decoration-none text-muted-foreground link-titan">How It
-                            Works</a></li>
-                    <li><a href="#why-us" class="text-decoration-none text-muted-foreground link-titan">Why Choose
-                            Us</a></li>
-                    <li><a href="#service-area" class="text-decoration-none text-muted-foreground link-titan">Service
-                            Area</a></li>
-                    <li><a href="#quote-form" class="text-decoration-none text-muted-foreground link-titan">Get A
-                            Quote</a></li>
+
+            <div>
+                <h2 class="footer-title">Quick links</h2>
+                <ul class="footer-list footer-links">
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#why-us">Why choose Titan</a></li>
+                    <li><a href="#cars-we-buy">Cars we buy</a></li>
+                    <li><a href="#service-area">Service area</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Get a free quote</a></li>
                 </ul>
             </div>
         </div>
-        <div
-            class="border-top border-titan footer-titan-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
-            <p class="text-muted-foreground small fw-bold text-uppercase mb-0" style="letter-spacing: 0.08em;">
-                &copy; {{ now()->year }} Titan Cash For Junk Cars. All rights reserved.
-            </p>
-            <div class="text-muted-foreground small fw-bold text-uppercase d-flex gap-4">
-                <a href="#" class="text-decoration-none text-muted-foreground link-titan-footer">Privacy
-                    Policy</a>
-                <a href="#" class="text-decoration-none text-muted-foreground link-titan-footer">Terms of
-                    Service</a>
-            </div>
+
+        <div class="footer-bottom">
+            <p>&copy; {{ now()->year }} {{ $site['name'] }}. All rights reserved.</p>
+            <p>Junk car removal &amp; cash for cars in Chicago, IL and suburbs.</p>
         </div>
     </div>
 </footer>
