@@ -340,9 +340,10 @@ button {
 }
 
 .brand-mark {
-    width: auto;
-    height: 3.375rem;
-    filter: drop-shadow(0 4px 8px hsl(var(--shadow) / 0.22));
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px hsl(var(--shadow) / 0.2));
 }
 
 .brand-text {
@@ -1385,21 +1386,14 @@ html:not([data-theme-mode]) .theme-icon--auto {
 }
 
 .footer-logo {
+    display: inline-block;
     margin-bottom: 1.25rem;
-    color: #fff;
 }
 
 .footer-logo .brand-mark {
-    height: 5.25rem;
-    filter: none;
-}
-
-.footer-logo .brand-name span {
-    color: hsl(var(--red-light));
-}
-
-.footer-logo .brand-sub {
-    color: hsl(0 0% 100% / 0.65);
+    width: 7.5rem;
+    height: 7.5rem;
+    filter: drop-shadow(0 10px 20px hsl(0 0% 0% / 0.35));
 }
 
 .footer-brand p {

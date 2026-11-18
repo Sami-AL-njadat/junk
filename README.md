@@ -15,7 +15,7 @@ Single-page marketing site for [titan-cash-for-junk-cars.com](https://titan-cash
 | Self-hosted font (Archivo variable, OFL) | `public/fonts/` |
 | SEO files | `public/robots.txt`, `public/sitemap.xml`, `public/site.webmanifest`, `public/images/og-image.jpg` |
 
-Logo: `public/images/logo.svg` (crest; `logo.png` for Google), compact version for small sizes in `public/favicon.svg`.
+Logo: `public/images/logo-{128,256,384}.webp` (transparent, used in header/footer), `logo.png` for Google; tab icons in `public/favicon.ico` and `public/icons/`.
 
 Palette (tokens at the top of `resources/css/app.css`): logo red `#D62839` for buttons and accents, soft navy `#1B2741` for dark bands and the footer, white and light gray `#F5F7FB` backgrounds, green checkmarks, yellow review stars.
 
