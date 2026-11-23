@@ -17,7 +17,7 @@ class HomeController extends Controller
         $title = "Cash for Junk Cars Chicago, IL | Free Towing | Titan {$phone}";
         $metaDescription = 'Get cash for junk cars in Chicago, IL. Free towing, same-day pickup and top dollar for any make or model — running or not. Call Titan at '.$phone.' for a free offer.';
 
-        $serviceAreas = ['Chicago', 'Palos Hills', 'Orland Park', 'Tinley Park', 'Joliet', 'Naperville', 'Oak Lawn', 'Bridgeview', 'Burbank', 'Worth', 'Alsip', 'Harvey', 'Aurora', 'Bolingbrook', 'Cicero'];
+        $serviceAreas = ['Chicago', 'Lockport', 'Palos Hills', 'Orland Park', 'Tinley Park', 'Joliet', 'Naperville', 'Oak Lawn', 'Bridgeview', 'Burbank', 'Worth', 'Alsip', 'Harvey', 'Aurora', 'Bolingbrook', 'Cicero'];
 
         $faqs = [
             [

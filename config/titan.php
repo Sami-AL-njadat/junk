@@ -22,14 +22,14 @@ return [
     'phone_display' => '(331) 341-4878',
 
     'address' => [
-        'street' => '9731 S 90th Ave',
-        'city' => 'Palos Hills',
+        'street' => '16336 John Ct',
+        'city' => 'Lockport',
         'region' => 'IL',
-        'postal_code' => '60465',
+        'postal_code' => '60441',
         'country' => 'US',
     ],
 
-    'maps_url' => 'https://www.google.com/maps/search/?api=1&query=9731+S+90th+Ave%2C+Palos+Hills%2C+IL+60465',
+    'maps_url' => 'https://maps.app.goo.gl/U5tV9a19wnHK8qfTA',
 
     'hours' => [
         [
